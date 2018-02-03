@@ -15,7 +15,7 @@ function populate(artworks){
     for (let i = 0; i < artworks.length; i++){
         let thumbnailTag = "<em>" + artworks[i].name + "</em><br>" + artworks[i].subName + " by " + artworks[i].artist.firstName + " " + artworks[i].artist.middleName + " " + artworks[i].artist.lastName + "<br>";
         
-        $("#previewsHere").append($('<div class="col-sm-4"><div class="thumbnail"><a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a><div id="thumbCaption" class="caption"><p>' + thumbnailTag + '</p></div></a></div></div>').hide().fadeIn("3000"));
+        $("#previewsHere").append($('<div class="col-sm-4"><div class="thumbnail"><a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a><div class="caption"><p>' + thumbnailTag + '</p></div></a></div></div>').hide().fadeIn("3000"));
     }
 }
 $(document).click(function(e) {
