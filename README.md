@@ -7,9 +7,10 @@ A PDF of the brochure that we were given is located [here](http://www.jackson.or
 ### Problems with the Brochure.
 #### Font
 The font in the Brochure is mostly Microsoft's proprietary fonts. Here is a table of the font used and our alternative:
-Proprietary Font | Our Font
----
-Garamond Italic | EB Garamond
-Avenir | Lato
-New Baskerville | Libre Baskerville
-Times New Roman | Tinos
+
+| Proprietary Font | Our Font          |
+| ---------------- | ----------------- |
+| Garamond Italic  | EB Garamond       |
+| Avenir           | Lato              |
+| New Baskerville  | Libre Baskerville |
+| Times New Roman  | Tinos             |
