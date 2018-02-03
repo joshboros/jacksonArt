@@ -1,5 +1,6 @@
 # jacksonArt
 This is our website for Jackson Hospital Foundation's art gallery.
+The site is hosted [here](http://boros.site/jacksonArt/gallery.html). Note: This may not be up-to-date.
 
 ## Brochure
 A PDF of the brochure that we were given is located [here](http://www.jackson.org/media/1322/art-brochure-4-panel-3-16-17.pdf)
