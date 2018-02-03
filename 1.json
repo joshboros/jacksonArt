@@ -1,0 +1,14 @@
+[
+    {"name":"College Street", "subName":"", "artist":{"firstName":"Jack", "middleName":"C", "lastName":"Deloney"}},
+    {"name":"New Growth But the Same Old Tune", "subName":"", "artist":{"firstName":"Jim", "middleName":"", "lastName":"Gunter" }},
+    {"name":"Oscar", "subName":"", "artist":{"firstName":"Patricia", "middleName":"", "lastName":"Caldwell" }},
+    {"name":"Alabama Natural", "subName":"", "artist":{"firstName":"Mark", "middleName":"", "lastName":"Montoya" }},
+    {"name":"Sunlit Fields", "subName":"", "artist":{"firstName":"Shirley", "middleName":"", "lastName":"Esco" }},
+    {"name":"Roadside Series", "subName":"", "artist":{"firstName":"Clark", "middleName":"", "lastName":"Walker" }},
+    {"name":"Bits & Pieces", "subName":"", "artist":{"firstName":"Honey", "middleName":"", "lastName":"Baker" }},
+    {"name":"Now You Can Feel Like the Only One Flying", "subName":"", "artist":{"firstName":"Sam", "middleName":"", "lastName":"Stephens" }},
+    {"name":"Spring Flowers", "subName":"", "artist":{"firstName":"Elmore", "middleName":"", "lastName":"DeMott" }},
+    {"name":"Jackson Hospital Collage", "subName":"", "artist":{"firstName":"Beau", "middleName":"", "lastName":"Redmond" }},
+    {"name":"March Comes Before April", "subName":"", "artist":{"firstName":"Hilda", "middleName":"", "lastName":"Slager" }},
+    {"name":"Music in Montgomery", "subName":"", "artist":{"firstName":"Barbara", "middleName":"", "lastName":"Davis" }}
+]
