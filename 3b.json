@@ -1,7 +1,9 @@
+[
 {"name":"Mardi Gras Merriment", "subName":"", "artist":{"firstName":"Terry", "middleName":"", "lastName":"McKee" }},
 {"name":"Night Shift", "subName":"", "artist":{"firstName":"M", "middleName":"", "lastName":"Ferraro" }},
 {"name":"Untitled", "subName":"", "artist":{"firstName":"Sandra", "middleName":"Hicks", "lastName":"Larson" }}, 
 {"name":"Serenity of Nature", "subName":"", "artist":{"firstName":"Sandra", "middleName":"Hicks", "lastName":"Larson" }}, 
 {"name":"April Flowers", "subName":"", "artist":{"firstName":"Ethel", "middleName":"W.", "lastName":"Barnes" }},
 {"name":"Daylillies", "subName":"", "artist":{"firstName":"Jean", "middleName":"", "lastName":"Daniel" }},
-{"name":"Hat Rack", "subName":"", "artist":{"firstName":"Jule", "middleName":"", "lastName":"Perry" }},
+{"name":"Hat Rack", "subName":"", "artist":{"firstName":"Jule", "middleName":"", "lastName":"Perry" }}
+]

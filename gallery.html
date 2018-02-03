@@ -7,7 +7,7 @@
     <meta name="author" content="Josh Boros">
     <meta mame="author" content="Surya Chigurupati">
     <meta name="description" content="Jackson Hospital Foundation Art Gallery">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="Keywords" content="">
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato|Libre+Baskerville|Tinos" rel="stylesheet">
@@ -17,8 +17,106 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    <style>
+        body {
+            padding-top: 70px;
+            
+        }
+        @media (max-width: 500px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+}
+    </style>
+    
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #588025; font-family: 'Lato', sans-serif;">
+    
+        <a class="navbar-brand" href="#"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Gallery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarToggle">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <!--<li class="nav-item active">
+                    <a class="nav-link" href="#">Gallery <span class="sr-only">(current)</span></a>
+                    -->
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("1")'>First Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("2")'>Second Floor</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="thirdFloorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Third Floor</a>
+                    <div class="dropdown-menu" aria-labelledby="thirdFloorDropdown" style="background-color: #588025; font-family: 'Lato', sans-serif;">
+                        <a class="dropdown-item" href='javascript:loadJsonDB("3a")'>Elevator Lobby</a>
+                        <a class="dropdown-item" href='javascript:loadJsonDB("3b")'>North Wing</a>
+                        <a class="dropdown-item" href='javascript:loadJsonDB("3c")'>CVICU Waiting</a>
+                        <a class="dropdown-item" href='javascript:loadJsonDB("3d")'>Crossover</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("4")'>Fourth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("fbc")'>Family Birth Center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("5")'>Fifth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href='javascript:loadJsonDB("6")'>Sixth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="galleryContainer" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a>
+                        <div id="thumbCaption" class="caption"><p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p></div>
+                    </a>
+                </div>
+            </div>
+                        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a>
+                        <div id="thumbCaption" class="caption"><p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p></div>
+                    </a>
+                </div>
+            </div>
+                        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a>
+                        <div id="thumbCaption" class="caption"><p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p></div>
+                    </a>
+                </div>
+            </div>
+                        <div class="col-sm-4">
+                <div class="thumbnail">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a>
+                        <div id="thumbCaption" class="caption"><p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div id="demo" >
+        </div>
+    </main>
+    
 
 </body>
 
