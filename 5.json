@@ -1,0 +1,25 @@
+[
+{"name":"Ice Wagon", "subName":"", "artist":{"firstName":"John", "middleName":"", "lastName":"Lapsley" }},
+{"name":"French Garden Still Life", "subName":"", "artist":{"firstName":"Craig", "middleName":"", "lastName":"Greene" }},
+{"name":"Waterlillies No. Five", "subName":"", "artist":{"firstName":"Neal", "middleName":"", "lastName":"Brantley" }},
+{"name":"White Flowers", "subName":"", "artist":{"firstName":"", "middleName":"", "lastName":"Chipaman" }},
+{"name":"Bright Flowers", "subName":"", "artist":{"firstName":"Karen", "middleName":"", "lastName":"Schmitt" }},
+{"name":"Vertigo Sarong", "subName":"", "artist":{"firstName":"Richard", "middleName":"", "lastName":"Mills" }},
+{"name":"Spring on Felder", "subName":"", "artist":{"firstName":"Julia", "middleName":"Anne", "lastName":"Griggs" }}, 
+{"name":"Golden Morning", "subName":"", "artist":{"firstName":"Richard", "middleName":"", "lastName":"Folmar" }},
+{"name":"Lunch at Pike Road", "subName":"", "artist":{"firstName":"Carol", "middleName":"", "lastName":"Ballard" }},
+{"name":"As Time Goes By", "subName":"triptych", "artist":{"firstName":"Mark", "middleName":"", "lastName":"Montoya" }},
+
+{"name":"Holly Creek", "subName":"", "artist":{"firstName":"Tim", "middleName":"", "lastName":"Vaught" }},
+{"name":"Springtime on the Lake", "subName":"", "artist":{"firstName":"Myrtle", "middleName":"", "lastName":"Cohen" }},
+{"name":"Lighthouse", "subName":"", "artist":{"firstName":"Jean", "middleName":"", "lastName":"Daniel" }},
+{"name":"Untitled", "subName":"", "artist":{"firstName":"Anton", "middleName":"", "lastName":"Haardt" }},
+{"name":"The Watussi Woman", "subName":"", "artist":{"firstName":"Durand", "middleName":"", "lastName":"Seay" }},
+{"name":"Untitled", "subName":"", "artist":{"firstName":"Kevyn", "middleName":"", "lastName":"Bates" }},
+{"name":"Cloverdale Road", "subName":"", "artist":{"firstName":"Tom", "middleName":"", "lastName":"Conner" }},
+{"name":"The Discus Thrower", "subName":"", "artist":{"firstName":"Michael", "middleName":"Vaughn", "lastName":"Sims" }}, 
+{"name":"Untitled", "subName":"", "artist":{"firstName":"Mary", "middleName":"Lynne", "lastName":"Levy" }}, 
+{"name":"Gaggle", "subName":"", "artist":{"firstName":"Frank", "middleName":"", "lastName":"Randall, MD" }},
+{"name":"Dreams on Dexter", "subName":"", "artist":{"firstName":"Barbara", "middleName":"", "lastName":"Davis" }},
+{"name":"Jasmine Hill Gardens", "subName":"series of four", "artist":{"firstName":"Bama Brushstrokes ", "middleName":"", "lastName":"Painters Chapter" }}
+]
