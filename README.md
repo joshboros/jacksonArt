@@ -2,7 +2,7 @@
 This is our website for Jackson Hospital Foundation's art gallery.
 
 ## Brochure
-A PDF of the brochure that we were given is located [here] (http://www.jackson.org/media/1322/art-brochure-4-panel-3-16-17.pdf)
+A PDF of the brochure that we were given is located [here](http://www.jackson.org/media/1322/art-brochure-4-panel-3-16-17.pdf)
 
 ### Problems with the Brochure.
 #### Font
