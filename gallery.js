@@ -14,10 +14,12 @@ function populate(artworks){
     //We may want to populate the image boxes and images here too.
     
     for (let i = 0; i < artworks.length; i++){
-        out +="<br>";
-        out += "<em>" + artworks[i].name + "</em><br>" + artworks[i].subName + " by " + artworks[i].artist.firstName + " " + artworks[i].artist.middleName + " " + artworks[i].artist.lastName + "<br>";
+        let thumbnailTag = "<em>" + artworks[i].name + "</em><br>" + artworks[i].subName + " by " + artworks[i].artist.firstName + " " + artworks[i].artist.middleName + " " + artworks[i].artist.lastName + "<br>";
+        //out +="<br>";
+        out +='<div class="col-sm-4"><div class="thumbnail"><a href="https://placeholder.com"><img src="http://via.placeholder.com/1920x1080" style="width:100%"></a><div id="thumbCaption" class="caption"><p>' + thumbnailTag + '</p></div></a></div></div>'
+        
     }
-    document.getElementById("demo").innerHTML = out;
+    document.getElementById("previewsHere").innerHTML = out;
 }
 $(document).click(function(e) {
     if (!$(e.target).is('a.dropdown-toggle')) {
