@@ -15,3 +15,13 @@ The font in the Brochure is mostly Microsoft's proprietary fonts. Here is a tabl
 | Avenir           | Lato              |
 | New Baskerville  | Libre Baskerville |
 | Times New Roman  | Tinos             |
+
+## TODO:
+* Possible Search Bar. - low priority
+* Menu Third Floor Dropdown
+* HomeScreen
+* Image Viewer.
+* How long is the image comments going to be? 
+* Navbar cuts off top image on mobile.
+* Framing around thumbnails and thumbnail tags.
+* Browser navigation 
