@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <title>Gallery</title>
     <meta charset="UTF-8">
@@ -15,12 +14,32 @@
     <!--Bootstrap JS/Popper-->
     <script type="text/javascript" src="lib/bootstrap.bundle.js"></script>
     <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="lib/bootstrap.css">
+    <link rel="stylesheet"  href="lib/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap.css.map">
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato|Libre+Baskerville|Tinos" rel="stylesheet">
     <link rel="stylesheet" href="css/carousel.css">
+    <script type="text/javascript" src="artdb.js"></script>
+    <script type="text/javascript" src="artworks.json"></script>
     <script type="text/javascript" src="gallery.js"></script>
+    
+
     <style>
+    body {
+        padding-top: 50px;
+    }
+        .navbar{
+            position: fixed;
+            top: 0;
+            padding: 0 20px;
+            z-index: 30;
+            width: 100%;
+            max-height: 100%;
+            min-height: 50px;
+            margin-bottom: 20px;
+            background-color: #588025; 
+            font-family: 'Lato', sans-serif;
+        }
         body {
             position: relative;
             min-height: 100%;
@@ -32,23 +51,11 @@
             
             
         }
-        *, ::after, ::before {
-        box-sizing: border-box;
-}
         body > .container {
   padding: 60px 15px 0;
 }
-        .navbar{
-            margin-bottom: 20px;
-        }
-        @media (max-width: 500px) {
-            body {
-                padding-top: 56px;
-            }
-        }
         .caption{
             text-align: right;
-        }
         }
         .footer {
             position: absolute;
@@ -60,17 +67,17 @@
             background-color: #f5f5f5;
         }
         .footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+              padding-right: 15px;
+              padding-left: 15px;
 }
     </style>
     
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #588025; font-family: 'Lato', sans-serif;">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
     
-        <a class="navbar-brand" href='javascript:toGallery()' id="navbarGallery"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Gallery</a>
+        <a class="navbar-brand" id='GalleryMain' href='javascript:toGallery()' id="navbarGallery"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Gallery</a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -83,40 +90,37 @@
                     <a class="nav-link" href="#">Gallery <span class="sr-only">(current)</span></a>
                     -->
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("1")'>First Floor</a>
+                    <a class="nav-link" id='floor1' href='#floor1'>First Floor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("2")'>Second Floor</a>
+                    <a class="nav-link" id='floor2' href='#floor2'>Second Floor</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="thirdFloorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Third Floor</a>
+                    <a class="nav-link dropdown-toggle" href="#thirdFloorDropdown" id="thirdFloorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Third Floor</a>
                     <div class="dropdown-menu" aria-labelledby="thirdFloorDropdown" style="background-color: #588025; font-family: 'Lato', sans-serif; border-style: none; ">
-                        <a class="dropdown-item" href='javascript:loadJsonDB("3a")'>Elevator Lobby</a>
-                        <a class="dropdown-item" href='javascript:loadJsonDB("3b")'>North Wing</a>
-                        <a class="dropdown-item" href='javascript:loadJsonDB("3c")'>CVICU Waiting</a>
-                        <a class="dropdown-item" href='javascript:loadJsonDB("3d")'>Crossover</a>
+                        <a class="dropdown-item" id='floor3a' href='#floor3a'>Elevator Lobby</a>
+                        <a class="dropdown-item" id='floor3b' href='#floor3b'>North Wing</a>
+                        <a class="dropdown-item" id='floor3c' href='#floor3c'>CVICU Waiting</a>
+                        <a class="dropdown-item" id='floor3d' href='#floor3d'>Crossover</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("4")'>Fourth Floor</a>
+                    <a class="nav-link" id='floor4' href='#floor4'>Fourth Floor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("fbc")'>Family Birth Center</a>
+                    <a class="nav-link" id='floorfbc' href='#floorfbc'>Family Birth Center</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("5")'>Fifth Floor</a>
+                    <a class="nav-link" id='floor5' href='#floor5'>Fifth Floor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("6")'>Sixth Floor</a>
+                    <a class="nav-link" id='floor6' href='#floor6'>Sixth Floor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("jic")'>Imaging Center</a>
+                    <a class="nav-link" id='floorjic' href='#floorjic'>Imaging Center</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='javascript:loadJsonDB("jsdc")'>Sleep Disorders Center</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" id='floorjsdc' href='#floorjsdc'>Sleep Disorders Center</a>
                 </li>
             </ul>
         </div>
@@ -125,9 +129,9 @@
     <main role="main">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel0" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel1" data-slide-to="1"></li>
+          <li data-target="#myCarousel2" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -136,7 +140,7 @@
               <div class="carousel-caption text-left">
                 <h1>Example headline.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+               
               </div>
             </div>
           </div>
@@ -146,7 +150,6 @@
               <div class="carousel-caption">
                 <h1>Another example headline.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -156,7 +159,6 @@
               <div class="carousel-caption text-right">
                 <h1>One more for good measure.</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
               </div>
             </div>
           </div>
