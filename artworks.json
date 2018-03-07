@@ -1,5 +1,4 @@
-[
-{
+artworks = [{
     "title":"Shady Ladies", 
     "subTitle":"", 
     "floor":"2",
@@ -206,5 +205,6 @@
         }        
     }, 
     "filename":"William_Jenkins_Prancing_Ladies.jpg"
-}
-]
+}];
+
+
