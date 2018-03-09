@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Josh Boros">
+    <meta mame="author" content="Surya Chigurupati">
+    <meta name="description" content="Jackson Hospital Foundation Art Gallery">
+    <meta name="theme-color" content="#588025">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="Keywords" content="">
+    <!--jquery-->
+    <script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+    <!--Bootstrap JS/Popper-->
+    <script type="text/javascript" src="lib/bootstrap.bundle.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet"  href="lib/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap.css.map">
+    <!--Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato|Libre+Baskerville|Tinos" rel="stylesheet">
+    <link rel="stylesheet" href="css/carousel.css">
+    <script type="text/javascript" src="artdb.js"></script>
+    <script type="text/javascript" src="gallery.js"></script>
+    
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration:;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: darkolivegreen;
+                }
+
+        .active {
+            
+        }   
+
+    body {
+        padding-top: 50px;
+    }
+        .navbar{
+            position: fixed;
+            top: 0;
+            padding: 0 20px;
+            z-index: 30;
+            width: 100%;
+            max-height: 100%;
+            min-height: 50px;
+            margin-bottom: 20px;
+            background-color: #588025; 
+            font-family: 'Lato', sans-serif;
+        }
+        body {
+            position: relative;
+            min-height: 100%;
+            /*min-height: 75rem;*/
+            /*padding-top: 4.5rem;*/
+            /*padding-top: 70px;*/
+            padding-bottom: 20px;
+            margin-bottom: 60px;
+            
+            
+        }
+        body > .container {
+  padding: 60px 15px 0;
+}
+        .caption{
+            text-align: right;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            line-height: 60px; /* Vertically center the text there */
+            background-color: #f5f5f5;
+        }
+        .footer > .container {
+              padding-right: 15px;
+              padding-left: 15px;
+}
+    </style>
+    
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
+    
+        <a class="navbar-brand" id='GalleryMain' href='javascript:toGallery()' id="navbarGallery"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Home</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+        <div class="navbar-collapse collapse" id="navbarToggle">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <!--<li class="nav-item active">
+                    <a class="nav-link" href="#">Gallery <span class="sr-only">(current)</span></a>
+                    -->
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floor1' href='#floor-1'>First Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floor2' href='#floor-2'>Second Floor</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#thirdFloorDropdown" id="thirdFloorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Third Floor</a>
+                    <div class="dropdown-menu" aria-labelledby="thirdFloorDropdown" style="background-color: #588025; font-family: 'Lato', sans-serif; border-style: none; ">
+                        <a class="menudest dropdown-item" id='floor3a' href='#floor-3a'>Elevator Lobby</a>
+                        <a class="menudest dropdown-item" id='floor3b' href='#floor-3b'>North Wing</a>
+                        <a class="menudest dropdown-item" id='floor3c' href='#floor-3c'>CVICU Waiting</a>
+                        <a class="menudest dropdown-item" id='floor3d' href='#floor-3d'>Crossover</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floor4' href='#floor-4'>Fourth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floorfbc' href='#floor-fbc'>Family Birth Center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floor5' href='#floor-5'>Fifth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floor6' href='#floor-6'>Sixth Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floorjic' href='#floor-jic'>Imaging Center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='floorjsdc' href='#floor-jsdc'>Sleep Disorders Center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='about' href='https://www.jackson.org/foundation/healing-art-collection/'>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="menudest nav-link" id='contact' href='https://www.jackson.org/contact-us/'>Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <main role="main">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel0" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel1" data-slide-to="1"></li>
+          <li data-target="#myCarousel2" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <center>
+            <img class="first-slide" src="images/P_McKee.jpg" alt="First slide">
+                  </center>
+            <div class="container">
+              <div class="carousel-caption text-center">
+
+                <h1>P. McKee</h1> 
+                <p>Oil on Canvas</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+              <center>
+            <img class="second-slide" src="images/Barbara_Davis_Shady_Ladies.jpg" alt="Second slide">
+          </center>
+                  <div class="container">
+              <div class="carousel-caption">
+                <h1>Barbara Davis</h1>
+                <p>Oil on Canvas</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+              <center>
+            <img class="third-slide" src="images/Sharon_Yavis_Celestial_Chicken.jpg" alt="Third slide">
+           </center>
+                  <div class="container">
+              <div class="carousel-caption text-center">
+                <h1>Sharon Yavis</h1>
+                <p>Acrylic on Canvas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      </main>
+    
+        
+    <div id="galleryContainer" class="container-fluid" style="font-family: 'EB Garamond', serif;">
+        <div id="previewsHere"  class="row img-fluid">
+            <!--Previews are generated here. -->
+        </div>
+    </div>
+    
+    <!-- type of pating -->
+    <!-- Modal -->
+<div class="modal fade" id="viewImage" tabindex="-1" role="dialog" aria-labelledby="viewImage" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+    
+</body>
+
+</html>
