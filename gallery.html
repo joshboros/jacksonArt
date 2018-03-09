@@ -21,10 +21,11 @@
     <!--Fonts -->
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato|Libre+Baskerville|Tinos" rel="stylesheet">
     <link rel="stylesheet" href="css/carousel.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
     <script type="text/javascript" src="artworks.js"></script>
     <script type="text/javascript" src="gallery.js"></script>
 
-    <script src="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.js"></script>
 
     
 
@@ -74,6 +75,18 @@
               padding-right: 15px;
               padding-left: 15px;
 }
+    .mfp-no-margins img.mfp-img {
+        padding: 0;
+    }
+    /* position of shadow behind the image */
+    .mfp-no-margins .mfp-figure:after {
+        top: 0;
+        bottom: 0;
+    }
+    /* padding for main container */
+    .mfp-no-margins .mfp-container {
+        padding: 0;
+    }
     </style>
     
 </head>
