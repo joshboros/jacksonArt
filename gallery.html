@@ -14,6 +14,8 @@
     <!--Bootstrap JS/Popper-->
     <script type="text/javascript" src="lib/bootstrap.bundle.js"></script>
     <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">
+
     <link rel="stylesheet"  href="lib/bootstrap.css">
     <link rel="stylesheet" href="lib/bootstrap.css.map">
     <!--Fonts -->
@@ -22,7 +24,6 @@
     <script type="text/javascript" src="artworks.js"></script>
     <script type="text/javascript" src="gallery.js"></script>
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css">
     <script src="https://raw.githubusercontent.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.js"></script>
 
     
@@ -80,7 +81,7 @@
 <header>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
     
-        <a class="navbar-brand" id='GalleryMain' href='javascript:toGallery()' id="navbarGallery"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Gallery</a>
+        <a class="navbar-brand" id='GalleryMain' href='#home-0' id="navbarGallery"><!--<img src="http://www.jackson.org/media/1001/logo.png">-->Gallery</a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -130,6 +131,8 @@
     </nav>
     </header>
     <main role="main">
+
+        <div id="home" class="pages">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel0" data-slide-to="0" class="active"></li>
@@ -175,15 +178,9 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      </main>
-    
-        
-    <div id="galleryContainer" class="container-fluid" style="font-family: 'EB Garamond', serif;">
-        <div id="previewsHere"  class="row img-fluid">
-            <!--Previews are generated here. -->
         </div>
-    </div>
-    
+
+    </main>
     <!-- type of pating -->
     <!-- Modal -->
 <div class="modal fade" id="viewImage" tabindex="-1" role="dialog" aria-labelledby="viewImage" aria-hidden="true">
